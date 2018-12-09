@@ -672,6 +672,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 /* ^ Required to make .post-full-content:before/after z-index stacking work */
 
 .post-full-header {
+    position: absolute;
     margin: 0 auto;
     padding: 6vw 3vw 3vw;
     max-width: 1040px;
@@ -699,7 +700,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 
 .post-full-title {
     margin: 0;
-    color: color(var(--darkgrey) l(-5%));
+    color: #ffffff;
 }
 
 .date-divider {
@@ -2213,31 +2214,35 @@ Usage (In Ghost editor):
 .site-footer {
     position: relative;
     padding-top: 20px;
-    padding-bottom: 60px;
-    color: #fff;
-    background: color(var(--darkgrey) l(-15%));
+    padding-bottom: 20px;
+    color: #000;
+    background: #fff;
 }
 
 .site-footer-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-    color: rgba(255,255,255,0.7);
+    color: #000;
     font-size: 1.3rem;
 }
 
 .site-footer-content a {
-    color: rgba(255,255,255,0.7);
+    color: #000;
+}
+
+.site-footer-content p {
+    text-align: center;
 }
 
 .site-footer-content a:hover {
-    color: rgba(255,255,255,1);
+    color: #000;
     text-decoration: none;
 }
 
 .site-footer-nav {
     display: flex;
+    justify-content: center;
 }
 
 .site-footer-nav a {
