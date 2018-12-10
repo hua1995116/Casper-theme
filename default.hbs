@@ -5,7 +5,8 @@
     {{!-- Document Settings --}}
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
+    <meta name="baidu-site-verification" content="wzSEJUNA8b" />
+    <meta name="google-site-verification" content="aklundPewyY-OSiUkBNJIx26Ag2l4_pKmMG-QI2tqaE" />
     {{!-- Base Meta --}}
     <title>{{meta_title}}</title>
     <meta name="HandheldFriendly" content="True" />
@@ -88,5 +89,14 @@
     {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
     {{ghost_foot}}
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112201282-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-112201282-2');
+    </script>
 </body>
 </html>
