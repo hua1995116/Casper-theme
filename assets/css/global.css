@@ -484,3 +484,8 @@ h6 {
     font-size: 1.4rem;
     font-weight: 500;
 }
+
+p {
+    text-indent: 2em;
+    margin: 10px 0;
+}
