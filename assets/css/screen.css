@@ -735,7 +735,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     margin: 0 auto;
     padding: 70px 100px 0;
     min-height: 230px;
-    font-family: Georgia, serif;
+    font-family: 'Open Sans','-apple-system',HelveticaNeue-Light,'Helvetica Neue Light','Helvetica Neue','Hiragino Sans GB','Microsoft YaHei',Helvetica,Arial,sans-serif;
     font-size: 2.2rem;
     line-height: 1.6em;
     background: #fff;
@@ -929,7 +929,7 @@ Usage (In Ghost editor):
     color: var(--whitegrey);
     font-size: 1.4rem;
     line-height: 1.5em;
-    background: color(var(--darkgrey) l(-3%));
+    background: color(var(--darkgrey) l(-3%)) !important;
     border-radius: 5px;
 }
 
@@ -2321,4 +2321,25 @@ Usage (In Ghost editor):
 .my-pay-weixin {
     background-image: url('//picture-hyf.oss-cn-beijing.aliyuncs.com/IMG_2006.JPG');
     background-position: 0 0px;
+}
+
+.vultr-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.post-content h2:before, .post-content h3:before, .post-content h4:before, .post-content h6:before {
+    position: absolute;
+    left: -1em;
+    display: block;
+    content: '#';
+    color: #f72d84;
+}
+
+.post-content h2, .post-content h3, .post-content h4, .post-content h6 {
+    position: relative;
+    margin-top: .5rem;
+    text-indent: 1.2em;
 }
