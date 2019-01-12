@@ -817,7 +817,6 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .post-full-content a {
     color: #000;
     word-break: break-word;
-    box-shadow: var(--blue) 0 -1px 0 inset;
 }
 
 .post-full-content a:hover {
@@ -974,85 +973,6 @@ Usage (In Ghost editor):
 .post-full-content h6 {
     color: color(var(--darkgrey) l(-5%));
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-
-.post-full-content h1 {
-    margin: 0.5em 0 0.2em 0;
-    font-size: 4.6rem;
-    font-weight: 700;
-}
-@media (max-width: 500px) {
-    .post-full-content h1 {
-        font-size: 2.8rem;
-    }
-}
-
-.post-full-content h2 {
-    margin: 0.5em 0 0.2em 0;
-    font-size: 3.6rem;
-    font-weight: 700;
-}
-@media (max-width: 500px) {
-    .post-full-content h2 {
-        font-size: 2.6rem;
-    }
-}
-
-.post-full-content h3 {
-    margin: 0.5em 0 0.2em 0;
-    font-size: 2.8rem;
-    font-weight: 700;
-}
-@media (max-width: 500px) {
-    .post-full-content h3 {
-        font-size: 2.2rem;
-    }
-}
-
-.post-full-content h4 {
-    margin: 0.5em 0 0.2em 0;
-    font-size: 2.8rem;
-    font-weight: 700;
-}
-@media (max-width: 500px) {
-    .post-full-content h4 {
-        font-size: 2.2rem;
-    }
-}
-
-.post-full-content h5 {
-    display: block;
-    margin: 0.5em 0;
-    padding: 1em 0 1.5em;
-    border: 0;
-    color: var(--blue);
-    font-family: Georgia,serif;
-    font-size: 3.2rem;
-    line-height: 1.35em;
-    text-align: center;
-}
-@media (min-width: 1180px) {
-    .post-full-content h5 {
-        max-width: 1060px;
-        width: 100vw;
-    }
-}
-@media (max-width: 500px) {
-    .post-full-content h5 {
-        padding: 0 0 0.5em;
-        font-size: 2.2rem;
-    }
-}
-
-.post-full-content h6 {
-    margin: 0.5em 0 0.2em 0;
-    font-size: 2.3rem;
-    font-weight: 700;
-}
-@media (max-width: 500px) {
-    .post-full-content h6 {
-        font-size: 2rem;
-    }
 }
 
 .footnotes-sep {
@@ -2330,16 +2250,64 @@ Usage (In Ghost editor):
     margin: 10px 0;
 }
 
-.post-content h2:before, .post-content h3:before, .post-content h4:before, .post-content h6:before {
-    position: absolute;
-    left: -1em;
-    display: block;
-    content: '#';
-    color: #f72d84;
+.toc_wrap {
+    font-size: 1.5rem;
 }
 
-.post-content h2, .post-content h3, .post-content h4, .post-content h6 {
-    position: relative;
-    margin-top: .5rem;
-    text-indent: 1.2em;
+.toc_root {
+    margin-bottom: 10px;
+    min-width: 225px;
+    padding: 20px 10px 10px;
+    line-height: 2;
+    font-size: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+.toc_wrap a {
+    color: #75b17d;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.toc_wrap a:hover {
+    text-decoration: underline;
+    color: #333;
+}
+
+.toc_wrap.hide .toc_root {
+    display: none;
+}
+
+.toc_wrap.hide .show_toc_btn {
+    display: inline-block;
+}
+
+.toc_root {
+    position: relative;
+}
+
+.toc_lvl {
+    display: block;
+    padding-left: 22px;
+}
+
+.toc_lvl_1 {
+    padding-left: 0;
+}
+
+.toc_wrap .hide_toc_btn {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+}
+
+.toc_wrap .show_toc_btn {
+    display: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #f9f9f9;
+    line-height: 1.5;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 1em;
+}
+

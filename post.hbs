@@ -41,7 +41,7 @@ into the {body} of the default.hbs template --}}
             {{/if}}
 
             <section class="post-full-content">
-                <div class="post-content markdown-body">
+                <div class="post-content markdown-body" id="post-content">
                     {{content}}
                 </div>
             </section>
@@ -175,6 +175,16 @@ into the {body} of the default.hbs template --}}
 {{> floating-header}}
 
 {{/post}}
+
+<script src="https://cdn.jsdelivr.net/npm/auto-toc-js@1.0.0/dist/toc.min.js"></script>
+<script>
+    new Toc({
+        wrapperId: 'post-content',
+        insertId: 'post-content',
+        showSerial: false
+    }).createToc();
+    $('.hide_toc_btn').click();
+</script>
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
 {{#contentFor "scripts"}}
