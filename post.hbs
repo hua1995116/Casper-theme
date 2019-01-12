@@ -183,7 +183,7 @@ into the {body} of the default.hbs template --}}
         insertId: 'post-content',
         showSerial: false
     }).createToc();
-    $('.hide_toc_btn').click();
+    document.querySelector('.hide_toc_btn').click();
 </script>
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
