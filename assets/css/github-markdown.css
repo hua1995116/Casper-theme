@@ -244,36 +244,6 @@
     margin-bottom: 0;
 }
 
-/* .markdown-body h1 {
-    font-size: 32px;
-    font-weight: 600;
-}
-
-.markdown-body h2 {
-    font-size: 24px;
-    font-weight: 600;
-}
-
-.markdown-body h3 {
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.markdown-body h4 {
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.markdown-body h5 {
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.markdown-body h6 {
-    font-size: 12px;
-    font-weight: 600;
-} */
-
 .markdown-body p {
     margin-top: 0;
     margin-bottom: 10px;
@@ -477,30 +447,7 @@ h6 {
     font-size: 1.4rem
 }
 
-h5 {
-    font-size: 1.6rem
-}
-
-h4 {
-    font-size: 1.8rem
-}
-
-h3 {
-    font-size: 2.2rem;
-    line-height: 2.6rem
-}
-
-h2 {
-    font-size: 2.8rem;
-    line-height: 4.6rem
-}
-
-h1 {
-    font-size: 3.2rem;
-    line-height: 3.8rem
-}
-
-p {
+.markdown-body p {
     font-size: 1.6rem;
     line-height: 2.8rem;
     margin-top: 2.2rem;
@@ -517,18 +464,6 @@ p {
     padding-bottom: 0.3em;
     /* font-size: 1.5em; */
     border-bottom: 1px solid #eaecef;
-}
-
-.markdown-body h3 {
-    /* font-size: 1.25em; */
-}
-
-.markdown-body h4 {
-    /* font-size: 1em; */
-}
-
-.markdown-body h5 {
-    /* font-size: 0.875em; */
 }
 
 .markdown-body h6 {
