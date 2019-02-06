@@ -2308,3 +2308,7 @@ Usage (In Ghost editor):
 .copyright p {
     margin: 0;
 }
+
+.inner-index {
+    padding: 0 4vw;
+}
