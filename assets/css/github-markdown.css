@@ -485,6 +485,7 @@ h6 {
 }
 
 .markdown-body li {
+    font-size: 1.6rem;
     word-wrap: break-all;
 }
 
