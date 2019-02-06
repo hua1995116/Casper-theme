@@ -26,6 +26,23 @@ into the {body} of the default.hbs template --}}
         <article class="post-full {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
 
             <header class="post-full-header">
+                {{!-- <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
+                    {{#primary_tag}}
+                        <span class="date-divider">/</span> <a href="{{url}}">{{name}}</a>
+                    {{/primary_tag}}
+                </section>
+                <h1 class="post-full-title">{{title}}</h1> --}}
+                {{#if feature_image}}
+                {{!-- <figure class="post-full-image" style="background-image: url({{feature_image}})">
+                </figure> --}}
+                    <img class="post-full-image" src="{{feature_image}}" alt="">
+                {{/if}}
+            </header>
+
+
+
+            <section class="post-full-content">
                 <section class="post-full-meta">
                     <time class="post-full-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
                     {{#primary_tag}}
@@ -33,14 +50,6 @@ into the {body} of the default.hbs template --}}
                     {{/primary_tag}}
                 </section>
                 <h1 class="post-full-title">{{title}}</h1>
-            </header>
-
-            {{#if feature_image}}
-            <figure class="post-full-image" style="background-image: url({{feature_image}})">
-            </figure>
-            {{/if}}
-
-            <section class="post-full-content">
                 <div class="post-content markdown-body" id="post-content">
                     {{content}}
                 </div>
@@ -183,7 +192,7 @@ into the {body} of the default.hbs template --}}
         insertId: 'post-content',
         showSerial: false
     }).createToc();
-    document.querySelector('.hide_toc_btn').click();
+    // document.querySelector('.hide_toc_btn').click();
 </script>
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
