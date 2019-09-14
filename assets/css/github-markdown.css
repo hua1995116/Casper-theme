@@ -246,7 +246,7 @@
 
 .markdown-body p {
     margin-top: 0;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 .markdown-body blockquote {
@@ -363,7 +363,7 @@
 .markdown-body table,
 .markdown-body pre {
     margin-top: 0;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
 }
 
 .markdown-body hr {
@@ -450,7 +450,7 @@ h6 {
 .markdown-body p {
     font-size: 1.6rem;
     line-height: 2.8rem;
-    margin-top: 2.2rem;
+    /* margin-top: 2.2rem; */
     color: #333;
 }
 
@@ -485,6 +485,7 @@ h6 {
 }
 
 .markdown-body li {
+    font-size: 1.6rem;
     word-wrap: break-all;
 }
 
