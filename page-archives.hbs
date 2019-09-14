@@ -1,0 +1,80 @@
+{{!< default}}
+
+<style>
+    .tags-headers {}
+
+    .header-text {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .tags-item {
+        width: 30%;
+        position: relative;
+        height: 100px;
+        margin-top: 20px;
+        background-size: 100%;
+    }
+    .tags-item a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .tags-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .tags-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .tag-name {
+        position: absolute;
+        left: 10px;
+        color: #fff;
+    }
+</style>
+
+<header class="site-header outer">
+    <div class="inner">
+        {{> "site-nav"}}
+    </div>
+</header>
+
+{{#post}}
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+        <header class="tags-headers">
+            <h1 class="header-text">{{title}}</h1>
+        </header>
+        <div class="tags-content">
+            {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
+            {{#foreach tags}}
+
+            <div class="tags-item" style="background-image:url({{feature_image}});">
+                <div class="tags-bg"></div>
+                <a href='{{ url }}'>
+                    <h2 class="tag-name">{{ name }} <small>({{ count.posts }})</small></h2>
+                </a>
+            </div>
+
+            {{/foreach}}
+            {{/get}}
+        </div>
+    </div>
+</main>
+
+{{/post}}
