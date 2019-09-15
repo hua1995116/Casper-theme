@@ -26,16 +26,10 @@ into the {body} of the default.hbs template --}}
         <article class="post-full {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
 
             <header class="post-full-header">
-                {{!-- <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
-                    {{#primary_tag}}
-                        <span class="date-divider">/</span> <a href="{{url}}">{{name}}</a>
-                    {{/primary_tag}}
-                </section>
-                <h1 class="post-full-title">{{title}}</h1> --}}
+                <div class="title-container">
+                    <h1 class="post-img-title">{{title}}</h1>
+                </div>
                 {{#if feature_image}}
-                {{!-- <figure class="post-full-image" style="background-image: url({{feature_image}})">
-                </figure> --}}
                     <img class="post-full-image" src="{{feature_image}}" alt="">
                 {{/if}}
             </header>
@@ -66,6 +60,13 @@ into the {body} of the default.hbs template --}}
                         <div class="my-pay-alipay my-pay-div"></div>
                         <div class="my-pay-weixin my-pay-div"></div>
                     </div>
+                </div>
+            </section>
+
+            <section class="wechat" style="text-align: center;">
+                <div>
+                    <h2>欢迎关注微信公众号</h2>
+                    <img style="width: 200px" src="https://s3.qiufengh.com/blog/1568533451774.png" alt="">
                 </div>
             </section>
 
